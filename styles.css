@@ -49,10 +49,11 @@ nav{
 }
 .logo{
   padding-top: 10px;
+  padding-right: 150px;
 }
 
 .bar-btn{
-  margin-left:5%;
+  padding-left: 150px;
   cursor: pointer;
 }
 .nav__menu{
@@ -131,7 +132,7 @@ nav{
 }
 .contenedor__descripcion{
   width: 370px;
-  height: 500px;
+  height: auto;
   border: 12px solid blue;
   background-color: #fff;
   border-top-left-radius: 60px 90px;
@@ -142,7 +143,7 @@ nav{
   text-align: center;
   
 }
-.contenedor__descripcion p{
+.contenedor__descripcion h3{
  text-align: center;
  margin-top: 5%;
 
@@ -165,7 +166,7 @@ nav{
   transition: 0.3s ease-in-out;
 }
 .card__contenedor:hover{
-  transform: scale(1.5);
+  transform: scale(1.2);
 }
 .card{
   display: flex;
@@ -187,8 +188,10 @@ nav{
 }
 
 .card__description p{
-  padding-top: 20px;
+  padding-top: 50px;
+  margin-top: 30px;
   text-align: center;
+  font-size: 150px;
 }
 #card__2{
   border: 12px solid red;
@@ -251,7 +254,61 @@ nav{
   width: auto;
   height: 200px;
 }
+.contenedor__rainbow{
+  height: 350px;
+  width: 350px;
+  position: absolute;
+  border: 1px solid #fff;
+  transform: translate(-50%,-50%);
+  top: 50%;
+  left: 50%;
+  border-radius: 5px;
+  box-shadow: 0 20px 35px #fff;
+  overflow: hidden;
 
+}
+.contenedor__rainbow:before{
+  content:"" ;
+  height: 150%;
+  width: 150%;
+  position: absolute;
+  background: conic-gradient(
+    #fd004c,
+    #fe9000,
+    #fff020,
+    #3edf4b,
+    #3363ff,
+    #b102b7,
+    #fd004c
+  );
+  left: -25%;
+  top: -25%;
+  animation: spin 1.5s infinite linear;
+}
+@keyframes spin{
+  100%{
+      transform: rotate(-360deg);
+  }
+}
+.contenedor__rainbow::after{
+content: "Bienvenidos a la página honor a una de las mejores epocas para la musica, el arte y el cine los 80!";
+position: absolute;
+background-color: black;
+height: 93%;
+width: 93%;
+top: 3.5%;
+left: 3.5%;
+border-radius: 5px;
+display: grid;
+place-items: center;
+color: #fff;
+letter-spacing: 6px;
+font-size: 20px;
+text-align: center;
+
+
+
+}
 
 
 
@@ -308,6 +365,13 @@ nav{
   .contenedor__descripcion p{
   margin-top: 25%;
   }
+  .contenedor__rainbow{
+    width: 1000px;
+  }
+ .contenedor__rainbow:after{
+  font-size: 50px;
+ }
+
 
 
 
