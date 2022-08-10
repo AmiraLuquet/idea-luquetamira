@@ -1,0 +1,62 @@
+@media (min-width:768px){
+    .area-grid{
+      min-height: 100vh;
+      display: grid;
+      grid-template-rows: 150px auto 200px;
+      grid-template-columns: 150px auto 150px;
+      grid-template-areas: 
+      "header header header"
+      "fila__1 section fila__2"
+      "footer footer footer";
+    }
+    header{
+      grid-area: header;
+    }
+    section{
+      grid-area: section;
+      background-color: #5800FF;
+      
+    }
+    .fila__1{
+      grid-area: fila__1;
+      background-color: #fff;
+      display: block;
+      background-image: url(../img/costados_img.png);
+    }
+    .fila__2{
+      grid-area: fila__2;
+      background-color: #fff;
+      display: block;
+      background-image: url(../img/costados_img.png);
+    }
+    footer{
+      grid-area: footer ;
+    }
+    .section__contenedor{
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      margin: 70px;
+      
+    }
+    .card__contenedor{
+      height: 800px;
+    }
+    .contenedor__descripcion{
+      height: 800px;
+        p{
+          margin-top: 25%;
+        }
+    }
+    .section__titulo{
+      margin-top: 25%;
+    }
+    .contenedor__rainbow{
+      width: 1000px;
+        &:after{
+          font-size: 50px;
+        }
+    }
+
+  
+  }
