@@ -22,16 +22,7 @@
     "section"
     "footer";
   }
-  header{
-    grid-area: header;
-    background-image: url(../img/header_img.png);
-    background-size: auto;
-  }
-  section{
-    grid-area: section;
-    background-color: black;
-    
-  }
+
   footer{
     grid-area: footer ;
     background: #5e2a80;
@@ -40,9 +31,3 @@
     background: -moz-linear-gradient(90deg,#5e2a80 0%, #c04e86 40%, #c04e86 40%, #5e2a80 80%);
   }
   
-  .fila__1{
-    display: none;
-  }
-  .fila__2{
-    display: none;
-  }

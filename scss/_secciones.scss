@@ -1,5 +1,16 @@
 /**************SECCIONES,CONTENEDORES, CARDS, FORMS*************/
 
+section{
+  grid-area: section;
+  background-color: black;
+  
+}
+.fila__1{
+  display: none;
+}
+.fila__2{
+  display: none;
+}
 
 .section__contenedor{
     display: flex;
