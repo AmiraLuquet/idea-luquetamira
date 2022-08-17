@@ -1,4 +1,5 @@
 @charset "UTF-8";
+/*Map de colores para cards y animacion rainbow*/
 * {
   margin: 0;
   padding: 0;
@@ -19,14 +20,6 @@ body {
   grid-template-rows: 150px auto 200px;
   grid-template-columns: auto;
   grid-template-areas: "header" "section" "footer";
-}
-
-footer {
-  grid-area: footer;
-  background: #5e2a80;
-  background: linear-gradient(90deg, #5e2a80 0%, #c04e86 40%, #c04e86 40%, #5e2a80 80%);
-  background: -webkit-linear-gradient(90deg, #5e2a80 0%, #c04e86 40%, #c04e86 40%, #5e2a80 80%);
-  background: -moz-linear-gradient(90deg, #5e2a80 0%, #c04e86 40%, #c04e86 40%, #5e2a80 80%);
 }
 
 header {
@@ -95,19 +88,24 @@ nav {
 
 footer {
   grid-area: footer;
-  background: #5e2a80;
-  background: linear-gradient(90deg, #5e2a80 0%, #c04e86 40%, #c04e86 40%, #5e2a80 80%);
-  background: -webkit-linear-gradient(90deg, #5e2a80 0%, #c04e86 40%, #c04e86 40%, #5e2a80 80%);
-  background: -moz-linear-gradient(90deg, #5e2a80 0%, #c04e86 40%, #c04e86 40%, #5e2a80 80%);
+  background-image: url(../img/layered-waves-haikei.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: black;
+  position: static;
 }
 
+/*background: linear-gradient(90deg,#5e2a80 0%, #c04e86 40%, #c04e86 40%, #5e2a80 80%);
+background: -webkit-linear-gradient(90deg,#5e2a80 0%, #c04e86 40%, #c04e86 40%, #5e2a80 80%);
+background: -moz-linear-gradient(90deg,#5e2a80 0%, #c04e86 40%, #c04e86 40%, #5e2a80 80%);*/
 .footer__cosas {
-  width: 100%;
-  height: 200px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
+  position: absolute;
+  width: 100%;
+  height: 200px;
 }
 .footer__cosas .footer__redes {
   display: flex;
@@ -128,26 +126,23 @@ footer {
   color: rgb(129, 145, 145);
 }
 
-/**************SECCIONES,CONTENEDORES, CARDS, FORMS*************/
+/**************SECCIONES,CONTENEDORES, CARDS, FORMS*************/ /*Map de colores para cards y animacion rainbow*/
 section {
   grid-area: section;
   background-color: black;
 }
 
-.fila__1 {
+.fila__1, .fila__2 {
   display: none;
 }
 
-.fila__2 {
-  display: none;
-}
-
+/*aca use el extend*/
 .section__contenedor {
   display: flex;
   flex-direction: column;
-  margin: 70px;
   justify-content: space-around;
   align-items: center;
+  margin: 70px;
 }
 .section__contenedor .section__titulo {
   text-align: center;
@@ -321,7 +316,8 @@ section {
     grid-area: section;
     background-color: #5800FF;
   }
-  .fila__1 {
+  /*aca use el extend*/
+  .fila__1, .fila__2 {
     grid-area: fila__1;
     background-color: #fff;
     display: block;

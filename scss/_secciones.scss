@@ -1,23 +1,21 @@
 /**************SECCIONES,CONTENEDORES, CARDS, FORMS*************/
-
+@import "variables";
 section{
   grid-area: section;
-  background-color: black;
+  background-color: map-get($colors, color-negro );
   
 }
 .fila__1{
   display: none;
 }
+/*aca use el extend*/
 .fila__2{
-  display: none;
+  @extend .fila__1;
 }
 
 .section__contenedor{
-    display: flex;
-    flex-direction: column;
+  @include compartido(space-around);
     margin: 70px;
-    justify-content: space-around;
-    align-items: center;
         .section__titulo{
             text-align: center;
             
@@ -25,8 +23,8 @@ section{
         .contenedor__descripcion{
             width: 370px;
             height: auto;
-            border: 12px solid blue;
-            background-color: #fff;
+            border: 12px solid map-get($colors, color-blue );
+            background-color: map-get($colors, color-blanco );
             border-top-left-radius: 60px 90px;
             border-bottom-right-radius: 60px 90px;
             box-shadow: 64px 64px 23ps 40px rgba(0,0,0,0.4), 12px 12px 0px 18px rgba(0,0,0,0.4);
@@ -48,7 +46,7 @@ section{
     margin: 50px;
     width: 370px;
     height: auto;
-    border: 12px solid orange;
+    border: 12px solid map-get($colors , color-orange);
     background-color: #fff;
     border-top-left-radius: 60px 90px;
     border-bottom-right-radius: 60px 90px;
@@ -59,19 +57,19 @@ section{
     transform: scale(1);
     transition: 0.3s ease-in-out;
       #card__2{
-        border: 12px solid red;
+        border: 12px solid map-get($colors , color-red );
       
       }
       #card__3{
-        border: 12px solid blue;
+        border: 12px solid map-get($colors, color-blue );
       
       }
       #card__4{
-        border: 12px solid pink;
+        border: 12px solid map-get($colors, color-pink );
       
       }
       #card__5{
-        border: 12px solid purple;
+        border: 12px solid map-get($colors, color-purple );
       
       }
         .card{
@@ -108,10 +106,10 @@ section{
   }
 
   .form__caja{
-    background-color: black;
+    background-color: map-get($colors, color-negro );;
     margin-top: 10%;
     margin-bottom: 10%;
-    color: #5CE1E6;
+    color: map-get($colors, color-cian );
     width: 70%;
     margin-left: 15%;
     height: 100%;
@@ -142,9 +140,9 @@ section{
     width: 100px;
     height: 50px;
     font-family: 'Roboto Mono', monospace;
-    color: #5CE1E6;
-    background-color: black;
-    border: 2px solid #00FFC6;
+    color:  map-get($colors , color-cian );
+    background-color: map-get($colors, color-negro );
+    border: 2px solid map-get($colors, color-cian2 );
     margin-top: 50px;
     margin-left: 30px;
   
@@ -154,12 +152,12 @@ section{
     height: 350px;
     width: 350px;
     position: absolute;
-    border: 1px solid #fff;
+    border: 1px solid map-get($colors, color-blanco );
     transform: translate(-50%,-50%);
     top: 50%;
     left: 50%;
     border-radius: 5px;
-    box-shadow: 0 20px 35px #fff;
+    box-shadow: 0 20px 35px map-get($colors, color-blanco);
     overflow: hidden;
         &:before{
             content:"" ;
@@ -167,13 +165,13 @@ section{
             width: 150%;
             position: absolute;
             background: conic-gradient(
-            #fd004c,
-            #fe9000,
-            #fff020,
-            #3edf4b,
-            #3363ff,
-            #b102b7,
-            #fd004c
+              map-get($colors, color-rojiso),
+              map-get($colors, color-anaranjado),
+              map-get($colors, color-amarillo),
+              map-get($colors, color-verde),
+              map-get($colors, color-azulado),
+              map-get($colors, color-magenta),
+              map-get($colors, color-rojiso)
             );
             left: -25%;
             top: -25%;
@@ -187,7 +185,7 @@ section{
         &:after{
             content: "Bienvenidos a la página honor a una de las mejores epocas para la musica, el arte y el cine los 80!";
             position: absolute;
-            background-color: black;
+            background-color: map-get($colors , color-negro );
             height: 93%;
             width: 93%;
             top: 3.5%;
@@ -195,7 +193,7 @@ section{
             border-radius: 5px;
             display: grid;
             place-items: center;
-            color: #fff;
+            color: map-get($colors , color-blanco );
             letter-spacing: 6px;
             font-size: 20px;
             text-align: center;

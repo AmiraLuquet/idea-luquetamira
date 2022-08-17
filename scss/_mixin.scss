@@ -1,0 +1,6 @@
+@mixin compartido ($justify-content) {
+     display: flex;
+     flex-direction: column;
+     justify-content: $justify-content;
+     align-items: center;
+}
