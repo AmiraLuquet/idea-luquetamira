@@ -7,9 +7,7 @@ footer{
     display: block
     
   }
-  /*background: linear-gradient(90deg,#5e2a80 0%, #c04e86 40%, #c04e86 40%, #5e2a80 80%);
-  background: -webkit-linear-gradient(90deg,#5e2a80 0%, #c04e86 40%, #c04e86 40%, #5e2a80 80%);
-  background: -moz-linear-gradient(90deg,#5e2a80 0%, #c04e86 40%, #c04e86 40%, #5e2a80 80%);*/
+  
 
 .footer__cosas{
    @include compartido(space-evenly);

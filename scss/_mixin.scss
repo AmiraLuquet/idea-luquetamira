@@ -4,3 +4,11 @@
      justify-content: $justify-content;
      align-items: center;
 }
+@mixin sectionindex($grid-area) {
+     grid-area: $grid-area;
+     display: flex;
+     flex-direction: row;
+     justify-content: space-evenly;
+     align-items: center
+     
+}
