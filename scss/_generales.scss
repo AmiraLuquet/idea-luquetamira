@@ -15,13 +15,32 @@
   
 
   .area-grid{
-    min-height: 100vh;
     display: grid;
-    grid-template-rows: 150px auto 200px;
-    grid-template-columns: auto;
-    grid-template-areas: 
+    min-height: 100vh;
+    width: 100%;
+    grid-template-columns: 100%;
+    grid-template-rows:150px auto 150px ;
+    grid-template-areas:
     "header"
     "section"
     "footer";
+    background-image: linear-gradient(
+      to bottom right,
+      map-get($colors, color1) 0%,
+      map-get($colors, color2) 20%,
+      map-get($colors, color3) 40%,
+      map-get($colors, color4) 60%,
+      map-get($colors, color5) 80%
+    );
+    background-size: 200% 200%;
+    animation: movimiento 5s linear infinite alternate;
+  }
+  @keyframes movimiento{
+    from{
+      background-position: 0 0;
+    }
+    to{
+      background-position: 100% 100%;
+    }
   }
 

@@ -1,8 +1,11 @@
+$primary: #6415e5;
+$navbar-light-hover-color: rgba(blue, .7);
+$navbar-light-active-color:rgba(violet, .9);
+@import "../node_modules/bootstrap/scss/bootstrap";
 @import "variables";
 @import "mixin";
 @import "generales";
 @import "header";
-@import "nav";
 @import "footer";
 @import "secciones";
 @import "media768px";
