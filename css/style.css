@@ -11232,6 +11232,10 @@ h1, .h1 {
   margin-bottom: 50px;
 }
 
+.card {
+  justify-content: space-around;
+}
+
 @media (min-width: 768px) {
   .area-grid {
     min-height: 100vh;
